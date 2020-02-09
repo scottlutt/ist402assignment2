@@ -18,7 +18,14 @@
 
 <body>
 
-  <div id="title"></div>
+<div class="instructions">
+  <strong>Instructions</strong>
+  <p>Read the following story, paying attention to how each of the characters develop and interact. Afterwards,
+    provide the <b>name</b> and a <b>short description</b> of each character.
+  </p>
+  <br />
+</div>
+  <div id="storyItems"></div>
 
   <script>
     fetch('stories/story_05.json')
@@ -33,9 +40,9 @@
       });
 
     function appendData(data) {
-      var mainContainer = document.getElementById("title");
+      var mainContainer = document.getElementById("storyItems");
       var div = document.createElement("div");
-      div.innerHTML = 'Title: ' + data.title + "<br /> <br />" + 'Link: ' + "<a href='"+data.link+"' target=\"_blank\">Link to the Story </a>" + "<br /> <br />" + 'Text: ' + data.text + "<br /> <br />";
+      div.innerHTML = '<strong>Title: </strong>' + data.title + "<br /> <br />" + "<a href='"+data.link+"' target=\"_blank\">Link to the Story</a>" + "<br /> <br />" + '<strong>Story: </strong>' + data.text + "<br /> <br />";
       mainContainer.appendChild(div);
     }
 
@@ -44,8 +51,8 @@
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/mturk.js"></script>
 
 
 </body>

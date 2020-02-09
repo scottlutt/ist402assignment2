@@ -17,6 +17,21 @@ html {
   line-height: 1.4;
 }
 
+
+strong{
+  font-size: 20px;
+}
+
+body{
+  padding: 40px;
+  font-family: "Helvetica", Times, serif;
+}
+
+.instructions{
+
+}
+
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
